@@ -9,7 +9,7 @@ import { Img } from '../../styles/common/ImgStyle';
 import FlexBox from '../../styles/common/FlexStyle';
 
 const LogoWrapper = styled(FlexBox)`
-  width: 1024px;
+  width: 100%;
   height: fit-content;
   overflow: hidden;
   cursor: pointer;

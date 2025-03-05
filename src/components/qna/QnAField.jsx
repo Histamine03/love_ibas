@@ -18,17 +18,17 @@ const AnswerContainer = styled.div`
   gap: 10px;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 90%;
 `;
 
 const OptionButton = styled.button`
   background: ${({ selected, theme }) => (selected ? theme.colors.pink : '#f0f0f0')};
   color: ${({ selected, theme }) => (selected ? theme.colors.white : theme.colors.black)};
   border: 2px solid #d3d3d3;
-  padding: 12px 16px;
+  padding: 10px 15px;
   margin: 5px;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 20px;
   font-size: ${({ theme }) => theme.fontSize.desktop.lg};
   transition: all 0.3s ease-in-out;
 

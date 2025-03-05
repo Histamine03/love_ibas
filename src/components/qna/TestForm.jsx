@@ -24,10 +24,10 @@ const Button = styled.button`
   font-size: ${({ theme }) => theme.fontSize.desktop.sm};
   cursor: pointer;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   background: ${({ disabled }) => (disabled ? '#ccc' : '#007bff')};
   color: white;
-  transition: background 0.3s;
+  transition: background 0.5s;
 
   &:hover {
     background: ${({ disabled }) => (disabled ? '#ccc' : '#0056b3')};

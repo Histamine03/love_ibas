@@ -9,7 +9,7 @@ import Target from './Target';
 import FlexBox from '../../styles/common/FlexStyle';
 
 const StyledPoster = styled(FlexBox)`
-  /* border: 1px solid ${({ theme }) => theme.colors.gray.dark}; */
+  /* border: 5% ${({ theme }) => theme.colors.gray.dark}; */
 `;
 
 const Poster = () => {

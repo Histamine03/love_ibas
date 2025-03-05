@@ -48,8 +48,10 @@ const Target = () => {
       <LargestCircle />
       <OuterCircle />
       <MiddleCircle />
-      <InnerCircle />
+
       <Img src={Heart} width="30px" height="30px" />
+      <Img src={Heart} width="40px" height="40px" />
+
     </TargetWrapper>
   );
 };
