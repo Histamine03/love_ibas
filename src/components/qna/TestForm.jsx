@@ -20,21 +20,38 @@ const NavButtons = styled(FlexBox)`
 `;
 
 const Button = styled.button`
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: ${({ theme }) => theme.fontSize.desktop.sm};
+  font-weight: bold;
   cursor: pointer;
   border: none;
-  border-radius: 20px;
-  background: ${({ disabled }) => (disabled ? '#ccc' : '#007bff')};
+  border-radius: 30px;
+  background: ${({ disabled }) =>
+    disabled ? '#ccc' : 'linear-gradient(135deg, #ff758c, #ff7eb3)'};
   color: white;
-  transition: background 0.5s;
+  transition: all 0.3s ease-in-out;
+  box-shadow: ${({ disabled }) =>
+    disabled
+      ? 'none'
+      : '4px 4px 10px rgba(255, 117, 140, 0.3), -4px -4px 10px rgba(255, 255, 255, 0.2)'};
 
   &:hover {
-    background: ${({ disabled }) => (disabled ? '#ccc' : '#0056b3')};
+    background: ${({ disabled }) =>
+      disabled ? '#ccc' : 'linear-gradient(135deg, #ff5e78, #ff85a1)'};
+    transform: ${({ disabled }) => (disabled ? 'none' : 'translateY(-2px)')};
+    box-shadow: ${({ disabled }) =>
+      disabled ? 'none' : '0px 6px 15px rgba(255, 117, 140, 0.4)'};
+  }
+
+  &:active {
+    transform: ${({ disabled }) => (disabled ? 'none' : 'scale(0.96)')};
+    box-shadow: ${({ disabled }) =>
+      disabled ? 'none' : '0px 3px 8px rgba(255, 117, 140, 0.2)'};
   }
 
   &:disabled {
     cursor: not-allowed;
+    opacity: 0.6;
   }
 `;
 

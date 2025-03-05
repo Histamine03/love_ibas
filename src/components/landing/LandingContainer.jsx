@@ -74,15 +74,15 @@ const LandingContainer = () => {
       </div>
       <Divider />
       <FlexBox width="100%">
-        <Left>
-          <Poster />
-        </Left>
+
         <Center>
-          <StyledText type="title">
-            좋아하면 울리는
-          </StyledText>
+          {/* <StyledText type="title">
+            좋아하면 가까워지는.... 우리가 만나는 방법
+          </StyledText> */}
+          <Poster />
+
         </Center>
-        <Right />
+
       </FlexBox>
       <FlexBox dir="col" row="between" col="center" height="14.5rem" padding="0 0 7rem 0">
       <FlexBox width="22.75rem" row="between">

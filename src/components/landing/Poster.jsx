@@ -16,7 +16,7 @@ const Poster = () => {
   return (
     <StyledPoster dir="col">
       <StyledText type="body">
-        "당신의 데이터 속에 <br /> 당신의 이상형이 있습니다."
+        "당신의 데이터로 우리의 회전각. <br /> 당신의 이상형이 있습니다."
       </StyledText>
       <Target />
     </StyledPoster>

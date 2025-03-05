@@ -22,19 +22,31 @@ const AnswerContainer = styled.div`
 `;
 
 const OptionButton = styled.button`
-  background: ${({ selected, theme }) => (selected ? theme.colors.pink : '#f0f0f0')};
+  background: ${({ selected, theme }) => (selected ? theme.colors.pink : '#f9f9f9')};
   color: ${({ selected, theme }) => (selected ? theme.colors.white : theme.colors.black)};
-  border: 2px solid #d3d3d3;
-  padding: 10px 15px;
-  margin: 5px;
+  border: 2px solid ${({ selected }) => (selected ? '#ff5e78' : '#d3d3d3')};
+  padding: 12px 18px;
+  margin: 8px;
   cursor: pointer;
-  border-radius: 20px;
-  font-size: ${({ theme }) => theme.fontSize.desktop.lg};
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: bold;
   transition: all 0.3s ease-in-out;
+  box-shadow: ${({ selected }) =>
+    selected
+      ? '0px 4px 12px rgba(255, 94, 120, 0.4)' // 선택된 버튼: 더 강조된 그림자 효과
+      : '4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.5)'};
 
   &:hover {
     background: ${({ theme }) => theme.colors.pink};
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 15px rgba(255, 94, 120, 0.5);
+  }
+
+  &:active {
+    transform: scale(0.95);
+    box-shadow: 0px 3px 8px rgba(255, 94, 120, 0.3);
   }
 `;
 
@@ -52,6 +64,12 @@ const InputField = styled.input`
   }
 `;
 
+const Divider = styled.div`
+  width: 80%;
+  height: 2px;
+  background: ${({ theme }) => theme.colors.gray.light};
+  margin: 2rem 0;
+`;
 const QuestionField = ({ question, answer, setAnswer }) => {
   const handleInputChange = (e) => {
     const inputValue = e.target.value;
@@ -62,6 +80,8 @@ const QuestionField = ({ question, answer, setAnswer }) => {
   return (
     <FlexBox dir="col" col="center">
       <SubTitle>{question.question}</SubTitle>
+      <Divider />
+
       {question.type === 'text' ? (
         <InputField
           type="text"
@@ -80,9 +100,13 @@ const QuestionField = ({ question, answer, setAnswer }) => {
               {option}
             </OptionButton>
           ))}
+
         </AnswerContainer>
       )}
+                <Divider />
+
     </FlexBox>
+    
   );
 };
 
