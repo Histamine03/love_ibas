@@ -15,6 +15,7 @@ API 작업 없이 일차적으로 UI만 구성했습니다.
 <Route path="/result" element={<ResultPage />} />
 ```
 
+
 ### 1️⃣ 터미널에서 작업할 디렉토리로 이동
 ```sh
 cd ~/dev/code
@@ -28,6 +29,11 @@ git clone https://github.com/IBAS-DEV-SIDE/loveAlarm.git
 ### 3️⃣ 프로젝트 폴더로 이동
 ```sh
 cd ~/dev/code
+```
+
+### 1️⃣ 백엔드(flask) 실행
+```sh
+python backend/app.py
 ```
 
 ### 4️⃣ 라이브러리 설치
